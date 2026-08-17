@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n, k, l, c, d, p, nl, np;
+    if(!(cin >> n >> k >> l >> c >> d >> p >> nl >> np)) return 0;
+
+    int drink = (k * l) / (n * nl);
+    int slices = (c * d) / n;
+    int salt = p / (n * np);
+
+    cout << min({drink, slices, salt}) << '\n';
+
+    return 0;
+}
