@@ -1,7 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    int a,b,c;
-    cin>>a>>b>>c;
-    
+    int n,m;
+    cin>>n>>m;
+    long long ans=0;
+
 }

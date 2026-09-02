@@ -1,18 +1,21 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 int main(){
-    int a;
-    cin>>a;
-    string s;
-    cin>>s;
-    int t=a;
-    for(int i=0;i<t;i++){
-        cin>>s[i];
-        cout<<endl;
+    int n;
+    cin >> n;
+    vector<string> v;
+    while(n--){
+        string s;
+        cin >> s;
+        v.push_back(s);
     }
-    for(int i=0;i<t;i++){
-        if(s[i]=="++X")
+    int x = 0;
+    for(auto it : v){
+        if(it == "++X") ++x;
+        else if( it == "X++") x++;
+        else if( it == "--X") --x;
+        else x--;
     }
-    cout<<a;
+    cout << x;
     return 0;
 }
